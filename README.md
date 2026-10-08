@@ -24,8 +24,8 @@ Assim sobram só os conceitos: você enxerga cada peça da arquitetura sem a "m�
 11. [Exercício: adicionar um novo micro frontend](#11-exercício-adicionar-um-novo-micro-frontend)
 12. [Do tutorial para produção](#12-do-tutorial-para-produção)
 13. [Trade-offs da abordagem](#13-trade-offs-da-abordagem)
-14. [Referências](#14-referências)
-15. [Padrões de código](#15-padrões-de-código)
+14. [Padrões de código](#14-padrões-de-código)
+15. [Referências](#15-referências)
 
 ---
 
@@ -703,18 +703,7 @@ Para um time pequeno com um único produto, um monolito bem modularizado costuma
 
 ---
 
-## 14. Referências
-
-- Cam Jackson, [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html), martinfowler.com.
-- [micro-frontends.org](https://micro-frontends.org/), de Michael Geers.
-- [Webpack Module Federation](https://webpack.js.org/concepts/module-federation/).
-- [single-spa](https://single-spa.js.org/).
-- [MDN: CustomEvent](https://developer.mozilla.org/pt-BR/docs/Web/API/CustomEvent).
-- [MDN: History API](https://developer.mozilla.org/pt-BR/docs/Web/API/History_API).
-
----
-
-## 15. Padrões de código
+## 14. Padrões de código
 
 Todos os apps seguem as mesmas convenções, descritas em detalhe no [PADROES.md](PADROES.md). Em resumo:
 
@@ -730,5 +719,14 @@ Todos os apps seguem as mesmas convenções, descritas em detalhe no [PADROES.md
 | Segurança | Dados vindos de outro app são escapados antes de entrar no HTML |
 
 No VS Code, instale a extensão **EditorConfig for VS Code** para aplicar a formatação ao salvar.
-#   m i c r o - f r o n t e n d s - f e e d m e  
- 
+
+---
+
+## 15. Referências
+
+- Cam Jackson, [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html), martinfowler.com.
+- [micro-frontends.org](https://micro-frontends.org/), de Michael Geers.
+- [Webpack Module Federation](https://webpack.js.org/concepts/module-federation/).
+- [single-spa](https://single-spa.js.org/).
+- [MDN: CustomEvent](https://developer.mozilla.org/pt-BR/docs/Web/API/CustomEvent).
+- [MDN: History API](https://developer.mozilla.org/pt-BR/docs/Web/API/History_API).
