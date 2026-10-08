@@ -1,0 +1,119 @@
+/* Estilos do micro frontend "Browse".
+   Todas as classes usam o prefixo "browse_" para não colidir com outros apps.
+   Cores e sombras vêm dos tokens --fm-* definidos pelo container. */
+
+.browse_hero {
+  background: linear-gradient(135deg, var(--fm-brand), #ff9a3c);
+  color: #fff;
+  border-radius: 24px;
+  padding: 40px 32px;
+  margin-bottom: 28px;
+}
+
+.browse_hero h1 {
+  margin: 0 0 6px;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: -.03em;
+}
+
+.browse_hero p {
+  margin: 0 0 20px;
+  opacity: .9;
+}
+
+.browse_filter {
+  width: 100%;
+  max-width: 480px;
+  padding: 14px 18px;
+  font: inherit;
+  border: 0;
+  border-radius: 999px;
+  outline: none;
+  background: #fff;
+  color: #1d1d1f;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+
+.browse_chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.browse_chip {
+  border: 1px solid var(--fm-border);
+  background: var(--fm-surface);
+  color: var(--fm-text);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  transition: .15s;
+}
+
+.browse_chip:hover {
+  border-color: var(--fm-brand);
+}
+
+.browse_chip.is-active {
+  background: var(--fm-text);
+  color: var(--fm-surface);
+  border-color: var(--fm-text);
+}
+
+.browse_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.browse_card {
+  background: var(--fm-surface);
+  border-radius: var(--fm-radius);
+  overflow: hidden;
+  box-shadow: var(--fm-shadow);
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.browse_card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--fm-shadow-hover);
+}
+
+.browse_cover {
+  height: 130px;
+  display: grid;
+  place-items: center;
+  font-size: 3.5rem;
+}
+
+.browse_body {
+  padding: 16px 18px 18px;
+}
+
+.browse_body h3 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.browse_meta {
+  display: flex;
+  gap: 12px;
+  color: var(--fm-muted);
+  font-size: .88rem;
+}
+
+.browse_rating {
+  color: #f5a623;
+  font-weight: 600;
+}
+
+.browse_empty {
+  color: var(--fm-muted);
+  padding: 40px 0;
+  text-align: center;
+  grid-column: 1 / -1;
+}

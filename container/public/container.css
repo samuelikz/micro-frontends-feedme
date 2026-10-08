@@ -1,0 +1,170 @@
+/* Design tokens compartilhados (papel de um "design system" leve).
+   Os micro frontends consomem estas variáveis, mas mantêm suas classes isoladas. */
+
+:root {
+  --fm-brand: #ff5a36;
+  --fm-brand-dark: #e0441f;
+  --fm-brand-soft: #fff1ec;
+  --fm-bg: #f6f5f3;
+  --fm-surface: #ffffff;
+  --fm-text: #1d1d1f;
+  --fm-muted: #6e6e73;
+  --fm-border: #ebe9e6;
+  --fm-radius: 16px;
+  --fm-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
+  --fm-shadow-hover: 0 2px 4px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.12);
+  --fm-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fm-bg: #121214;
+    --fm-surface: #1c1c1f;
+    --fm-text: #f2f2f2;
+    --fm-muted: #a1a1a6;
+    --fm-border: #2c2c30;
+    --fm-brand-soft: #2a1a15;
+    --fm-shadow: 0 1px 2px rgba(0,0,0,.4);
+    --fm-shadow-hover: 0 8px 28px rgba(0,0,0,.5);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fm-font);
+  background: var(--fm-bg);
+  color: var(--fm-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--fm-surface) 85%, transparent);
+  border-bottom: 1px solid var(--fm-border);
+}
+
+.container-header_inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.container-header_logo {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--fm-brand);
+  text-decoration: none;
+  letter-spacing: -.02em;
+}
+
+.container-header_nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.container-header_nav a {
+  color: var(--fm-muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: .15s;
+}
+
+.container-header_nav a:hover {
+  color: var(--fm-text);
+  background: var(--fm-bg);
+}
+
+.container-header_nav a.is-active {
+  color: var(--fm-brand);
+  background: var(--fm-brand-soft);
+}
+
+.container-header_cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--fm-brand);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s;
+}
+
+.container-header_cart.is-bump {
+  animation: container-bump .35s ease;
+}
+
+@keyframes container-bump {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+#micro-frontend-root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  min-height: 60vh;
+}
+
+.container-loading {
+  display: grid;
+  place-items: center;
+  padding: 80px 0;
+  color: var(--fm-muted);
+}
+
+.container-loading::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid var(--fm-border);
+  border-top-color: var(--fm-brand);
+  animation: container-spin .8s linear infinite;
+}
+
+@keyframes container-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-error {
+  background: var(--fm-brand-soft);
+  color: var(--fm-brand-dark);
+  padding: 20px;
+  border-radius: var(--fm-radius);
+}
+
+.container-footer {
+  text-align: center;
+  color: var(--fm-muted);
+  font-size: .85rem;
+  padding: 24px;
+  border-top: 1px solid var(--fm-border);
+}
+
+/* Acessibilidade: contorno visível para quem navega pelo teclado, em todos os apps. */
+:focus-visible {
+  outline: 3px solid var(--fm-brand);
+  outline-offset: 2px;
+}

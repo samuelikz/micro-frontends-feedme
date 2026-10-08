@@ -1,0 +1,12 @@
+{
+  "name": "micro-frontends-feedme",
+  "version": "1.0.0",
+  "description": "Tutorial de micro frontends: app de delivery dividido em apps independentes.",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node start-all.js"
+  }
+}

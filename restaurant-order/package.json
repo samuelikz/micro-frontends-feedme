@@ -1,0 +1,12 @@
+{
+  "name": "restaurant-order",
+  "version": "1.0.0",
+  "description": "Micro frontend de cardápio e pedido de um restaurante.",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

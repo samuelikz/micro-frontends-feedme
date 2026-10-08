@@ -1,0 +1,108 @@
+/* Estilos do micro frontend "RestaurantOrder".
+   Todas as classes usam o prefixo "restaurant-order_" para não colidir com outros apps.
+   Cores e sombras vêm dos tokens --fm-* definidos pelo container. */
+
+.restaurant-order_back {
+  background: var(--fm-surface);
+  border: 1px solid var(--fm-border);
+  color: var(--fm-text);
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.restaurant-order_back:hover {
+  border-color: var(--fm-brand);
+  color: var(--fm-brand);
+}
+
+.restaurant-order_hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 28px;
+  color: #1d1d1f;
+}
+
+.restaurant-order_emoji {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.restaurant-order_hero h2 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  letter-spacing: -.03em;
+}
+
+.restaurant-order_hero p {
+  margin: 0;
+  opacity: .7;
+}
+
+.restaurant-order_title {
+  font-size: 1.15rem;
+  margin: 0 0 14px;
+}
+
+.restaurant-order_menu {
+  display: grid;
+  gap: 12px;
+}
+
+.restaurant-order_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: var(--fm-surface);
+  padding: 18px 20px;
+  border-radius: var(--fm-radius);
+  box-shadow: var(--fm-shadow);
+}
+
+.restaurant-order_name {
+  font-weight: 600;
+}
+
+.restaurant-order_desc {
+  color: var(--fm-muted);
+  font-size: .88rem;
+  margin-top: 2px;
+}
+
+.restaurant-order_price {
+  font-weight: 700;
+  color: var(--fm-brand);
+  margin-top: 6px;
+}
+
+.restaurant-order_add {
+  background: var(--fm-brand);
+  color: #fff;
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background .15s, transform .1s;
+}
+
+.restaurant-order_add:hover {
+  background: var(--fm-brand-dark);
+}
+
+.restaurant-order_add:active {
+  transform: scale(.95);
+}
+
+.restaurant-order_add.is-done {
+  background: #2fb36d;
+}

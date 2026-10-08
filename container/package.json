@@ -1,0 +1,12 @@
+{
+  "name": "container",
+  "version": "1.0.0",
+  "description": "Shell da aplicação: header, roteamento e carregamento dos micro frontends.",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

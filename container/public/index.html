@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Feed me: exemplo de aplicação com micro frontends." />
+  <title>Feed me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" />
+  <link rel="stylesheet" href="/container.css" />
+</head>
+<body>
+  <header class="container-header">
+    <div class="container-header_inner">
+      <a href="/" data-link class="container-header_logo">🍔 Feed me</a>
+
+      <nav class="container-header_nav" aria-label="Navegação principal">
+        <a href="/" data-link>Restaurantes</a>
+        <a href="/random" data-link>Surpreenda-me</a>
+        <a href="/user-profile" data-link>Perfil</a>
+      </nav>
+
+      <a href="/user-profile" data-link class="container-header_cart" id="cart" aria-label="Ver carrinho">
+        🛒 <span id="cart-count" aria-live="polite">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Ponto de montagem único: o container decide qual micro frontend renderizar aqui. -->
+  <main id="micro-frontend-root"></main>
+
+  <footer class="container-footer">Feed me · exemplo de micro frontends</footer>
+
+  <!-- config.js precisa vir antes: define window.MICRO_FRONTENDS usado pelo container. -->
+  <script src="/config.js"></script>
+  <script type="module" src="/container.js"></script>
+</body>
+</html>

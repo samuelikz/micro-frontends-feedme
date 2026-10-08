@@ -1,0 +1,12 @@
+{
+  "name": "user-profile",
+  "version": "1.0.0",
+  "description": "Micro frontend de perfil do usuário e carrinho.",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

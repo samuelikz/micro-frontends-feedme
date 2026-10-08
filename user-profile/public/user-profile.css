@@ -1,0 +1,78 @@
+/* Estilos do micro frontend "UserProfile".
+   Todas as classes usam o prefixo "user-profile_" para não colidir com outros apps.
+   Cores e sombras vêm dos tokens --fm-* definidos pelo container. */
+
+.user-profile_grid {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 720px) {
+  .user-profile_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.user-profile_card {
+  background: var(--fm-surface);
+  padding: 28px;
+  border-radius: var(--fm-radius);
+  box-shadow: var(--fm-shadow);
+}
+
+.user-profile_avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--fm-brand), #ff9a3c);
+  margin-bottom: 14px;
+}
+
+.user-profile_card h2 {
+  margin: 0 0 4px;
+}
+
+.user-profile_muted {
+  color: var(--fm-muted);
+  margin: 0;
+  font-size: .92rem;
+}
+
+.user-profile_card h3 {
+  margin: 0 0 16px;
+}
+
+.user-profile_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--fm-border);
+}
+
+.user-profile_total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.user-profile_total span:last-child {
+  color: var(--fm-brand);
+}
+
+.user-profile_empty {
+  text-align: center;
+  padding: 32px 0;
+  color: var(--fm-muted);
+}
+
+.user-profile_empty div {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
